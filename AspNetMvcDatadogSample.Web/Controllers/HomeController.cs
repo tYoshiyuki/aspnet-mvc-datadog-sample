@@ -34,7 +34,7 @@ namespace AspNetMvcDatadogSample.Web.Controllers
 
         public ActionResult Slow(int delayMs = 3000)
         {
-            delayMs = Math.Max(0, Math.Min(delayMs, 30000));
+            delayMs = NormalizeDelayMs(delayMs);
 
             SetDatadogMetadata("home.slow", delayMs);
 
@@ -43,6 +43,21 @@ namespace AspNetMvcDatadogSample.Web.Controllers
             ViewBag.Result = _slowSampleService.Execute(delayMs);
 
             return View();
+        }
+
+        public ActionResult ExceptionTest(int delayMs = 1000)
+        {
+            delayMs = NormalizeDelayMs(delayMs);
+
+            SetDatadogMetadata("home.exception", delayMs);
+            _slowSampleService.ExecuteAndThrow(delayMs);
+
+            return new EmptyResult();
+        }
+
+        private static int NormalizeDelayMs(int delayMs)
+        {
+            return Math.Max(0, Math.Min(delayMs, 30000));
         }
 
         private void SetDatadogMetadata(string operationName, int delayMs)
