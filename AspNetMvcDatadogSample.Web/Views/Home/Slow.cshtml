@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Slow";
+}
+
+<main>
+    <h2>Slow</h2>
+    <p>@ViewBag.Message</p>
+
+    <ul>
+        <li>Delay: @ViewBag.DelayMs ms</li>
+        <li>Result: @ViewBag.Result</li>
+    </ul>
+
+    <p>
+        @Html.ActionLink("1秒", "Slow", "Home", new { delayMs = 1000 }, new { @class = "btn btn-outline-dark" })
+        @Html.ActionLink("3秒", "Slow", "Home", new { delayMs = 3000 }, new { @class = "btn btn-outline-dark ms-2" })
+        @Html.ActionLink("5秒", "Slow", "Home", new { delayMs = 5000 }, new { @class = "btn btn-outline-dark ms-2" })
+    </p>
+</main>
