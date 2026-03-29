@@ -37,8 +37,8 @@ namespace AspNetMvcDatadogSample.Web.Services
             {
                 SimulateLogicalDelay(delayMs);
 
-                throw new InvalidOperationException(
-                    string.Format("Datadog exception test. delayMs={0}", delayMs));
+                throw new ApplicationException(
+                    string.Format("Datadog exception test. delayMs={0}, {1}", delayMs, DateTime.Now));
             }
             catch (Exception ex)
             {
