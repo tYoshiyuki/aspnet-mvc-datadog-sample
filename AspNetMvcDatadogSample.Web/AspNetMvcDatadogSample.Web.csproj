@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.props" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.props')" />
+  <Import Project="..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.props" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.props')" />
   <Import Project="..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.props" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.props')" />
   <Import Project="..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.props" Condition="Exists('..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.props')" />
   <Import Project="..\packages\Datadog.Trace.3.40.0\build\Datadog.Trace.props" Condition="Exists('..\packages\Datadog.Trace.3.40.0\build\Datadog.Trace.props')" />
@@ -29,10 +29,13 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -279,10 +282,10 @@
     <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.targets" Condition="Exists('..\packages\Microsoft.SourceLink.Common.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.Common.targets')" />
   <Import Project="..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.11.0.100-preview.2.26159.112\build\Microsoft.Build.Tasks.Git.targets')" />
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.11.0.100-preview.2.26159.112\build\Microsoft.SourceLink.GitHub.targets')" />
+  <Import Project="..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.10.0.201\build\Microsoft.SourceLink.GitHub.targets')" />
 </Project>
